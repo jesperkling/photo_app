@@ -20,6 +20,13 @@ const index = async (req, res) => {
             albums: user.related('albums')
         }
 	});
+
+    if (!user) {
+        return res.status(404).send({
+            status: 'fail',
+            message: 'User not found'
+        });
+    }
 }
 
 /**
