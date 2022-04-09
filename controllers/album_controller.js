@@ -20,13 +20,6 @@ const index = async (req, res) => {
             albums: user.related('albums')
         }
 	});
-
-    if (!user) {
-        return res.status(404).send({
-            status: 'fail',
-            message: 'User not found'
-        });
-    }
 }
 
 /**
@@ -172,7 +165,7 @@ const addPhoto = async (req, res) => {
         });
     }
 
-    if (! usersAlbums) {
+    if (!usersAlbums) {
         res.status(404).send({
             status: 'fail',
             data: 'Album could not be found.'

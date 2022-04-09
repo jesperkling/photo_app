@@ -5,6 +5,8 @@
 const debug = require('debug')('photo_app:user_controller');
 const { matchedData, validationResult } = require('express-validator');
 const models = require('../models');
+const bcrypt = require('bcrypt');
+
 
 /**
  * Register user
