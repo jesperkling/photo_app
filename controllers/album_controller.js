@@ -101,7 +101,7 @@ const update = async (req, res) => {
 		debug("Album to update was not found. %o", { id: albumId });
 		res.status(404).send({
 			status: 'fail',
-			data: 'Album Not Found',
+			data: 'Album Not Found.',
 		});
 		return;
 	}
