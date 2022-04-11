@@ -10,9 +10,9 @@ const models = require('../models');
  *
  */
 const createRules = [
-	body('title').exists().isLength({ min: 4 }),
+	body('title').exists().isLength({ min: 3 }),
     body('url').exists().isURL(),
-    body('comment').optional(),
+    body('comment').optional().isLength({ min: 3 }),
 ];
 
 /**
