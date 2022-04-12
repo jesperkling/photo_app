@@ -118,12 +118,12 @@ const update = async (req, res) => {
 	const validData = matchedData(req);
 
 	try {
-		await photo.save(validData);
+		const updatedPhoto = await photo.save(validData);
 		
 		res.status(200).send({
 			status: 'success',
 			data: {
-                photo
+                updatedPhoto,
             }
 		});
 
