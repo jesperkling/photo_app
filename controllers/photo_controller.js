@@ -34,10 +34,8 @@ const show = async (req, res) => {
 
     if (!photos) {
         return res.status(404).send({
-            status: 'success',
-            data: {
-                photos: photoId
-            }
+            status: 'fail',
+            message: 'Photo could not be found'
         });
     }
 
