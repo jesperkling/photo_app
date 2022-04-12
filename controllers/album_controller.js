@@ -178,6 +178,7 @@ const addPhoto = async (req, res) => {
             status: 'fail',
             data: 'Photo could not be found.'
         });
+		return;
     }
 
     try {
